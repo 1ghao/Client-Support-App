@@ -48,7 +48,11 @@ const LoginScreen = ({navigation}) => {
       toastError('请输入密码');
       return;
     }
-    requestLogin();
+    try {
+      requestLogin();
+    } catch (error) {
+      toastError(String(error));
+    }
   }
 
   return (

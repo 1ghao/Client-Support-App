@@ -1,8 +1,9 @@
 import LoginScreen from '../../screens/login/LoginScreen';
 import ContactsScreen from '../../screens/contacts/ContactsScreen';
-import MessagesScreen from '../../screens/messages/MessagesScreen';
+import MessagesScreen from '../../screens/chat/MessagesScreen';
 import HomeScreen from '../../screens/home/HomeScreen';
 import SplashScreen from '../../screens/login/SplashScreen';
+import ChatScreen from '../../screens/chat/ChatScreen';
 
 interface Route {
   name: string;
@@ -11,7 +12,7 @@ interface Route {
 
 export const routes: Route[] = [
   {
-    name: 'Auth',
+    name: 'Splash',
     component: SplashScreen,
   },
   {
@@ -25,6 +26,10 @@ export const routes: Route[] = [
   {
     name: 'Messages',
     component: MessagesScreen,
+  },
+  {
+    name: 'Chat',
+    component: ChatScreen,
   },
   {
     name: 'Home',

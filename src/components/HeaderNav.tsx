@@ -7,6 +7,7 @@ interface HeaderNavProps {
   componentRight?: any;
   title?: string;
   titlePosition?: 'center' | 'left' | 'right';
+  background?: string;
 }
 
 const HeaderNav: React.FC<HeaderNavProps> = ({
@@ -14,9 +15,10 @@ const HeaderNav: React.FC<HeaderNavProps> = ({
   componentRight,
   title,
   titlePosition = 'center',
+  background = '#FFFFFF',
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: background}]}>
       <Text style={[styles.title, {textAlign: titlePosition}]}>{title}</Text>
       <View style={styles.componentLeft}>
         {componentLeft && componentLeft()}
@@ -35,13 +37,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF',
     padding: pxToDp(10),
-    elevation: 10,
-    shadowColor: '#171717',
-    shadowOffset: {width: -2, height: 4},
-    shadowOpacity: 1,
-    shadowRadius: 3,
   },
   title: {
     flex: 1,

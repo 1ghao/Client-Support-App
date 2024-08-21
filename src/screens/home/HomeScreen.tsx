@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import ContactsScreen from '../contacts/ContactsScreen';
-import MessagesScreen from '../messages/MessagesScreen';
+import MessagesScreen from '../chat/MessagesScreen';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {Image} from 'react-native';
 

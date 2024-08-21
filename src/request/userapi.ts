@@ -1,4 +1,9 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import http from '.';
+
+export async function getToken() {
+  return await AsyncStorage.getItem('user_token');
+}
 
 export interface LoginParams {
   username: string;

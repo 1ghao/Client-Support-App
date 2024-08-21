@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ActivityIndicator, View, StyleSheet} from 'react-native';
-import {getToken} from '../../request';
+import {getToken} from '../../request/userapi';
 
 const SplashScreen = ({navigation}: any) => {
   const [isLoading, setIsLoading] = useState(true);
